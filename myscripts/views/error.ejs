@@ -1,0 +1,19 @@
+<%- include('layout') %>
+
+<div class="error-container">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <div class="error-card">
+          <div class="error-icon">
+            <i class="fas fa-exclamation-circle"></i>
+          </div>
+          <h1 class="error-title"><%= status %></h1>
+          <h2 class="error-subtitle"><%= message %></h2>
+          <p class="error-description">Sorry, something went wrong. Please try again or return to the homepage.</p>
+          <a href="/" class="btn btn-primary mt-4">Return to Homepage</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

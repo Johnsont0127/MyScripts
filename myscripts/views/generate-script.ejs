@@ -1,0 +1,100 @@
+<%- include('layout') %>
+
+<div class="generate-script-container">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="page-title">Generate New Script</h1>
+        <p class="page-subtitle">Create an AI-powered video script for your Amazon product</p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-8 mx-auto">
+        <div class="generate-form-card">
+          <form action="/scripts/generate" method="POST">
+            <div class="mb-4">
+              <label for="productName" class="form-label">Product Name</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="productName" 
+                name="productName" 
+                placeholder="e.g., Wireless Bluetooth Earbuds"
+                required
+              >
+              <small class="form-text text-muted">Enter the exact name of your Amazon product</small>
+            </div>
+
+            <div class="mb-4">
+              <label for="tone" class="form-label">Script Tone</label>
+              <select class="form-select" id="tone" name="tone" required>
+                <option value="casual">Casual & Conversational</option>
+                <option value="professional">Professional & Informative</option>
+                <option value="funny">Funny & Entertaining</option>
+              </select>
+              <small class="form-text text-muted">Select the tone that best matches your brand voice</small>
+            </div>
+
+            <div class="mb-4">
+              <label for="highlights" class="form-label">Key Product Highlights</label>
+              <textarea 
+                class="form-control" 
+                id="highlights" 
+                name="highlights" 
+                rows="5" 
+                placeholder="List the main features and benefits of your product. Include any unique selling points, specifications, or customer pain points it solves."
+                required
+              ></textarea>
+              <small class="form-text text-muted">More detailed highlights will result in better scripts</small>
+            </div>
+
+            <div class="script-length mb-4">
+              <label class="form-label">Script Length</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="scriptLength" id="short" value="short" checked>
+                <label class="form-check-label" for="short">
+                  Short (30 seconds) - Best for TikTok, Reels, Shorts
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="scriptLength" id="medium" value="medium">
+                <label class="form-check-label" for="medium">
+                  Medium (60 seconds) - Best for standard product videos
+                </label>
+              </div>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Generate Script</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="script-tips mt-5">
+          <h3>Tips for Better Scripts</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <h4>Be Specific</h4>
+                <p>Include exact product specifications and unique features to make your script more compelling.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-bullseye"></i>
+                </div>
+                <h4>Focus on Benefits</h4>
+                <p>Explain how your product solves problems or improves the customer's life, not just what it does.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

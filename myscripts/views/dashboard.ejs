@@ -1,0 +1,156 @@
+<%- include('layout') %>
+
+<div class="dashboard-container">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="dashboard-title">Welcome, <%= user.name %></h1>
+        <p class="dashboard-subtitle">Generate and manage your Amazon product video scripts</p>
+      </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="dashboard-card">
+          <div class="card-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="card-content">
+            <h3>Scripts Generated</h3>
+            <p class="card-value"><%= user.scriptsGenerated %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="dashboard-card">
+          <div class="card-icon">
+            <i class="fas fa-crown"></i>
+          </div>
+          <div class="card-content">
+            <h3>Current Plan</h3>
+            <p class="card-value"><%= user.plan === 'free' ? 'Free' : user.plan === 'pro_monthly' ? 'Pro Monthly' : 'Pro Annual' %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="dashboard-card">
+          <div class="card-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="card-content">
+            <h3>Scripts Remaining</h3>
+            <p class="card-value"><%= user.plan === 'free' ? (user.scriptsLimit - user.scriptsGenerated) : 'Unlimited' %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <h2 class="section-title">Quick Actions</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="action-card">
+          <div class="action-icon">
+            <i class="fas fa-magic"></i>
+          </div>
+          <div class="action-content">
+            <h3>Generate New Script</h3>
+            <p>Create a new AI-powered video script for your Amazon product.</p>
+            <a href="/scripts/generate" class="btn btn-primary">Generate Script</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="action-card">
+          <div class="action-icon">
+            <i class="fas fa-folder"></i>
+          </div>
+          <div class="action-content">
+            <h3>View Your Scripts</h3>
+            <p>Access all your previously generated video scripts.</p>
+            <a href="/scripts" class="btn btn-outline-primary">View Scripts</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Scripts -->
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <h2 class="section-title">Recent Scripts</h2>
+      </div>
+    </div>
+    <div class="row">
+      <% if(scripts && scripts.length > 0) { %>
+        <% scripts.forEach(function(script) { %>
+          <div class="col-md-6 mb-4">
+            <div class="script-card">
+              <div class="script-header">
+                <h3><%= script.productName %></h3>
+                <span class="script-date"><%= new Date(script.createdAt).toLocaleDateString() %></span>
+              </div>
+              <div class="script-preview">
+                <p><%= script.content.substring(0, 150) %>...</p>
+              </div>
+              <div class="script-footer">
+                <a href="/scripts/<%= script._id %>" class="btn btn-sm btn-primary">View Full Script</a>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <div class="col-md-12">
+          <div class="empty-state">
+            <div class="empty-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3>No scripts yet</h3>
+            <p>Generate your first script to get started</p>
+            <a href="/scripts/generate" class="btn btn-primary">Generate Script</a>
+          </div>
+        </div>
+      <% } %>
+    </div>
+
+    <!-- Upgrade Banner (for free users) -->
+    <% if(user.plan === 'free') { %>
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <div class="upgrade-banner">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h3>Upgrade to Pro for Unlimited Scripts</h3>
+                <p>You've used <%= user.scriptsGenerated %> of your <%= user.scriptsLimit %> free scripts this month. Upgrade to Pro for unlimited scripts and advanced features.</p>
+              </div>
+              <div class="col-md-4 text-center">
+                <a href="/payments/pricing" class="btn btn-primary btn-lg">Upgrade Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% } %>
+
+    <!-- Affiliate Banner -->
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <div class="affiliate-banner">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <h3>Earn 30% Commission as an Affiliate</h3>
+              <p>Refer other Amazon influencers to MyScripts and earn 30% recurring commission on all their payments.</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <a href="/affiliates/join" class="btn btn-outline-primary btn-lg">Join Affiliate Program</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

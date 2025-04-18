@@ -39,4 +39,28 @@ router.get('/about', (req, res) => {
   });
 });
 
+// Contact page route
+router.get('/contact', (req, res) => {
+  res.render('contact', {
+    title: 'Contact Us - MyScripts',
+    user: req.user
+  });
+});
+
+// Blog page route
+router.get('/blog', (req, res) => {
+  res.render('blog', {
+    title: 'Blog - MyScripts',
+    user: req.user
+  });
+});
+
+// Help Center page route
+router.get('/help', (req, res) => {
+  res.render('help', {
+    title: 'Help Center - MyScripts',
+    user: req.user
+  });
+});
+
 module.exports = router;

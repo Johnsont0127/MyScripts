@@ -63,4 +63,20 @@ router.get('/help', (req, res) => {
   });
 });
 
+// Terms of Service page route
+router.get('/terms', (req, res) => {
+  res.render('terms', {
+    title: 'Terms of Service - MyScripts',
+    user: req.user
+  });
+});
+
+// Privacy Policy page route
+router.get('/privacy', (req, res) => {
+  res.render('privacy', {
+    title: 'Privacy Policy - MyScripts',
+    user: req.user
+  });
+});
+
 module.exports = router;

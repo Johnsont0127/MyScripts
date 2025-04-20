@@ -103,7 +103,7 @@
 
   <!-- Main Content -->
   <main>
-    <%- body %>
+    <%- typeof body !== 'undefined' ? body : '' %>
   </main>
 
   <!-- Footer -->

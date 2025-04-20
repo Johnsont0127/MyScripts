@@ -109,55 +109,65 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5>MyScripts</h5>
-          <p>AI-powered video scripts for Amazon influencers. Save time and increase conversions with optimized product scripts.</p>
-        </div>
-        <div class="col-md-2">
-          <h5>Company</h5>
-          <ul class="footer-links">
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/affiliates/join">Affiliate Program</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h5>Resources</h5>
-          <ul class="footer-links">
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/help">Help Center</a></li>
-            <li><a href="/payments/pricing">Pricing</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Stay Updated</h5>
-          <p>Subscribe to our newsletter for tips on creating better Amazon product videos.</p>
-          <form class="footer-form">
-            <div class="input-group">
-              <input type="email" class="form-control" placeholder="Your email">
-              <button class="btn btn-primary" type="submit">Subscribe</button>
-            </div>
-          </form>
-        </div>
+<footer class="footer">
+  <div class="container">
+    <!-- Stay Updated Section (Moved to top) -->
+    <div class="row mb-4">
+      <div class="col-md-8 mx-auto text-center">
+        <h5>Stay Updated</h5>
+        <p>Subscribe to our newsletter for tips on creating better Amazon product videos.</p>
+        <form class="footer-form">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email address">
+            <button class="btn btn-primary d-flex align-items-center" type="submit">
+              <i class="fas fa-paper-plane me-2 d-none d-sm-inline"></i>Subscribe
+            </button>
+          </div>
+        </form>
       </div>
-      <div class="footer-bottom">
-        <div class="row">
-          <div class="col-md-6">
-            <p>&copy; 2025 MyScripts. All rights reserved.</p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <ul class="footer-bottom-links">
-              <li><a href="/terms">Terms</a></li>
-              <li><a href="/privacy">Privacy</a></li>
-            </ul>
-          </div>
+    </div>
+    
+    <hr class="my-4">
+    
+    <!-- Main Footer Content -->
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5>MyScripts</h5>
+        <p>AI-powered video scripts for Amazon influencers. Save time and increase conversions with optimized product scripts.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Company</h5>
+        <ul class="footer-links">
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/affiliates/join">Affiliate Program</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Resources</h5>
+        <ul class="footer-links">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/help">Help Center</a></li>
+          <li><a href="/payments/pricing">Pricing</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2025 MyScripts. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <ul class="footer-bottom-links">
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <% if(typeof user !== 'undefined') { %>
   <!-- Mobile Bottom Navigation -->

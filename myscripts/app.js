@@ -31,6 +31,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
+// Add this after line 32 (app.set('view engine', 'ejs');)
+app.set('layout', 'layout');
+app.set('layout extractScripts', true);
+app.set('layout extractStyles', true);
+
 // Express session
 app.use(
   session({

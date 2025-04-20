@@ -751,3 +751,27 @@ body {
     margin-bottom: 20px;
   }
 }
+/* Desktop Footer Improvements */
+@media (min-width: 992px) {
+  .footer .row.justify-content-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer .footer-links {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .footer .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer .footer-bottom-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-left: 0;
+    list-style: none;
+  }
+}

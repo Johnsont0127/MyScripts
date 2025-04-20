@@ -70,6 +70,9 @@ app.use(function(req, res, next) {
 // DB Config
 const db = process.env.MONGODB_URI;
 
+// Set strictQuery to silence Mongoose deprecation warning
+mongoose.set('strictQuery', true);
+
 // Connect to MongoDB
 mongoose.connect(db, {
   useNewUrlParser: true,

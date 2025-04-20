@@ -1,0 +1,475 @@
+/* 
+ * MyScripts Mobile Optimization
+ * Inspired by Notion, Linear, Stripe, Superhuman, and Webflow
+ * Mobile-first approach with clean spacing and modern layout
+ */
+
+/* Base Mobile Styles */
+@media (max-width: 991px) {
+  /* Global Spacing Adjustments */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Typography Adjustments */
+  h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.8rem !important;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.4rem !important;
+  }
+
+  .lead {
+    font-size: 1.1rem !important;
+    line-height: 1.5;
+  }
+
+  /* Navigation Improvements */
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navbar-collapse {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 8px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background-color: var(--background);
+  }
+
+  .navbar-nav .nav-link.btn {
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+  }
+
+  /* Hero Section Optimization */
+  .landing-hero {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    margin-bottom: 15px;
+  }
+
+  .hero-content .lead {
+    margin-bottom: 30px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  /* Features Section */
+  .features {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .feature-card {
+    margin-bottom: 20px;
+    padding: 25px 20px;
+  }
+
+  /* How It Works Section */
+  .how-it-works {
+    padding: 50px 0;
+  }
+
+  .step {
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+
+  /* Pricing Section */
+  .pricing-preview {
+    padding: 50px 0;
+  }
+
+  .pricing-card {
+    margin-bottom: 25px;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+    border: 2px solid var(--primary);
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-5px);
+  }
+
+  .pricing-header {
+    padding: 25px 20px;
+  }
+
+  .pricing-features {
+    padding: 20px;
+  }
+
+  .pricing-card .btn {
+    margin: 0 20px 20px;
+  }
+
+  /* Testimonials Section */
+  .testimonials {
+    padding: 50px 0;
+  }
+
+  .testimonial-card {
+    margin-bottom: 20px;
+    padding: 25px 20px;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 50px 0;
+  }
+
+  .cta-content h2 {
+    margin-bottom: 15px;
+  }
+
+  .cta-content p {
+    margin-bottom: 25px;
+  }
+
+  /* Footer Optimization */
+  .footer {
+    padding: 50px 0 20px;
+    text-align: center;
+  }
+
+  .footer h5 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .footer-links li {
+    margin-bottom: 0;
+  }
+
+  .footer-form {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer-form .input-group {
+    flex-direction: column;
+  }
+
+  .footer-form .form-control {
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .footer-form .btn {
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .footer-bottom-links li {
+    margin: 0 10px;
+  }
+
+  /* Dashboard Optimization */
+  .dashboard-container {
+    padding: 20px 0;
+  }
+
+  .dashboard-title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .dashboard-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .dashboard-card {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  .card-value {
+    font-size: 1.5rem;
+  }
+
+  .action-card {
+    margin-bottom: 20px;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .action-icon {
+    margin: 0 auto 15px;
+  }
+
+  .action-content {
+    text-align: center;
+  }
+
+  .script-card {
+    margin-bottom: 20px;
+  }
+
+  .empty-state {
+    padding: 30px 20px;
+  }
+
+  .upgrade-banner, .affiliate-banner {
+    padding: 25px 20px;
+    text-align: center;
+  }
+
+  /* Auth Pages */
+  .auth-container {
+    padding: 40px 0;
+  }
+
+  .auth-card {
+    margin-bottom: 20px;
+  }
+
+  .auth-header {
+    padding: 25px 20px;
+  }
+
+  .auth-body {
+    padding: 25px 20px;
+  }
+
+  .auth-footer {
+    padding: 15px 20px;
+  }
+
+  /* Generate Script Page */
+  .generate-script-container {
+    padding: 20px 0;
+  }
+
+  .page-title, .page-subtitle {
+    text-align: center;
+  }
+
+  .generate-form-card {
+    padding: 25px 20px;
+  }
+
+  .script-tips {
+    padding: 25px 20px;
+  }
+
+  .tip-card {
+    margin-bottom: 20px;
+    padding: 20px 15px;
+  }
+
+  /* Form Enhancements for Touch */
+  .form-control, .form-select, .btn {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+    height: auto;
+    padding: 12px 15px;
+  }
+
+  textarea.form-control {
+    min-height: 120px;
+  }
+
+  .form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+  }
+
+  .form-check-label {
+    padding-left: 5px;
+  }
+
+  /* Card Layout Improvements */
+  .row.mobile-card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 0;
+  }
+
+  @media (min-width: 576px) {
+    .row.mobile-card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .mobile-card-grid > div {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Bottom Navigation Bar (Mobile Only) */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+  }
+
+  .mobile-bottom-nav a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-bottom-nav a.active {
+    color: var(--primary);
+  }
+
+  .mobile-bottom-nav i {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+
+  /* Add padding to main content when bottom nav is present */
+  body.has-bottom-nav main {
+    padding-bottom: 70px;
+  }
+
+  /* Mobile-specific spacing utilities */
+  .mb-mobile-0 { margin-bottom: 0 !important; }
+  .mb-mobile-1 { margin-bottom: 0.25rem !important; }
+  .mb-mobile-2 { margin-bottom: 0.5rem !important; }
+  .mb-mobile-3 { margin-bottom: 1rem !important; }
+  .mb-mobile-4 { margin-bottom: 1.5rem !important; }
+  .mb-mobile-5 { margin-bottom: 3rem !important; }
+
+  .mt-mobile-0 { margin-top: 0 !important; }
+  .mt-mobile-1 { margin-top: 0.25rem !important; }
+  .mt-mobile-2 { margin-top: 0.5rem !important; }
+  .mt-mobile-3 { margin-top: 1rem !important; }
+  .mt-mobile-4 { margin-top: 1.5rem !important; }
+  .mt-mobile-5 { margin-top: 3rem !important; }
+
+  .py-mobile-0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+  .py-mobile-1 { padding-top: 0.25rem !important; padding-bottom: 0.25rem !important; }
+  .py-mobile-2 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+  .py-mobile-3 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+  .py-mobile-4 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+  .py-mobile-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+
+  .px-mobile-0 { padding-left: 0 !important; padding-right: 0 !important; }
+  .px-mobile-1 { padding-left: 0.25rem !important; padding-right: 0.25rem !important; }
+  .px-mobile-2 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+  .px-mobile-3 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .px-mobile-4 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+  .px-mobile-5 { padding-left: 3rem !important; padding-right: 3rem !important; }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .btn-lg {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+
+  .landing-hero {
+    padding: 40px 0;
+  }
+
+  .features, .how-it-works, .pricing-preview, .testimonials, .cta-section {
+    padding: 40px 0;
+  }
+
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .dashboard-container, .generate-script-container, .auth-container {
+    padding: 15px 0;
+  }
+}

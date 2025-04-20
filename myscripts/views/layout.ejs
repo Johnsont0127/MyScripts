@@ -28,6 +28,8 @@
   <% if(typeof page !== 'undefined' && (page === 'login' || page === 'register')) { %>
     <link rel="stylesheet" href="/css/auth.css">
   <% } %>
+  
+  <%- style %>
 </head>
 <body<% if(typeof user !== 'undefined') { %> class="has-bottom-nav"<% } %>>
   <!-- Navigation -->
@@ -103,7 +105,7 @@
 
   <!-- Main Content -->
   <main>
-    <%- typeof body !== 'undefined' ? body : '' %>
+    <%- body %>
   </main>
 
   <!-- Footer -->
@@ -199,5 +201,7 @@
   <% if(typeof page !== 'undefined' && page === 'dashboard')  { %>
     <script src="/js/dashboard.js"></script>
   <% } %>
+  
+  <%- script %>
 </body>
 </html>

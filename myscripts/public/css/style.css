@@ -775,3 +775,13 @@ body {
     list-style: none;
   }
 }
+/* Footer column alignment fix */
+.footer .row.justify-content-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .row.justify-content-between > div {
+  flex: 0 0 30%;
+  max-width: 30%;
+}

@@ -1,0 +1,138 @@
+<div class="affiliate-join-container">
+  <div class="container py-5">
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4 mb-4">Join Our Affiliate Program</h1>
+        <p class="lead">Earn 30% commission on every referral who subscribes to MyScripts</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="card border-0 shadow-sm mb-5">
+          <div class="card-body p-4 p-lg-5">
+            <div class="row mb-4">
+              <div class="col-md-4 text-center mb-4 mb-md-0">
+                <div class="affiliate-step">
+                  <div class="step-icon mb-3">
+                    <i class="fas fa-user-plus fa-2x text-primary"></i>
+                  </div>
+                  <h4>Join</h4>
+                  <p>Sign up for our affiliate program in minutes</p>
+                </div>
+              </div>
+              <div class="col-md-4 text-center mb-4 mb-md-0">
+                <div class="affiliate-step">
+                  <div class="step-icon mb-3">
+                    <i class="fas fa-share-alt fa-2x text-primary"></i>
+                  </div>
+                  <h4>Share</h4>
+                  <p>Promote MyScripts with your unique referral link</p>
+                </div>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="affiliate-step">
+                  <div class="step-icon mb-3">
+                    <i class="fas fa-dollar-sign fa-2x text-primary"></i>
+                  </div>
+                  <h4>Earn</h4>
+                  <p>Get 30% commission on all referred subscriptions</p>
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <h3 class="mb-4">Apply Now</h3>
+            <form action="/affiliates/join" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" value="<%= user.name %>" disabled>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="email" value="<%= user.email %>" disabled>
+              </div>
+              <div class="mb-4">
+                <label for="paymentEmail" class="form-label">Payment Email (PayPal)</label>
+                <input type="email" class="form-control" id="paymentEmail" name="paymentEmail" required>
+                <small class="form-text text-muted">We'll send your commission payments to this email address</small>
+              </div>
+              <div class="mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                  <label class="form-check-label" for="termsCheck">
+                    I agree to the <a href="/terms" target="_blank">Affiliate Terms & Conditions</a>
+                  </label>
+                </div>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Join Affiliate Program</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4 p-lg-5">
+            <h3 class="mb-4">Frequently Asked Questions</h3>
+            
+            <div class="accordion" id="affiliateFAQ">
+              <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    How much can I earn?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#affiliateFAQ">
+                  <div class="accordion-body">
+                    You earn 30% commission on every subscription purchased through your referral link. For example, if someone signs up for our $19/month plan, you'll earn $5.70 per month for as long as they remain a subscriber.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    When and how do I get paid?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#affiliateFAQ">
+                  <div class="accordion-body">
+                    We process payments on the 1st of each month for the previous month's earnings. Payments are sent via PayPal to the email address you provide. You need to earn at least $50 before a payment is issued.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Who can join the affiliate program?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#affiliateFAQ">
+                  <div class="accordion-body">
+                    Any registered MyScripts user can join our affiliate program. You don't need to be a paid subscriber. The program is ideal for content creators, social media influencers, and anyone with an audience interested in Amazon product marketing.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How do I promote MyScripts?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#affiliateFAQ">
+                  <div class="accordion-body">
+                    After joining, you'll receive a unique referral link and promotional materials. You can share your link on social media, your website, YouTube videos, or directly with friends and colleagues. We also provide email templates and banner ads to help you promote effectively.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

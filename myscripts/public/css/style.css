@@ -835,3 +835,26 @@ body {
   flex: 0 0 30%;
   max-width: 30%;
 }
+/* Mobile Footer Fixes - Add to your mobile.css file */
+@media (max-width: 991px) {
+  /* Hide MyScripts column on mobile */
+  .footer .row.justify-content-between > div:first-child {
+    display: none;
+  }
+  
+  /* Center the remaining columns */
+  .footer .row.justify-content-between {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer .row.justify-content-between > div {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+    margin: 0 20px;
+    text-align: center;
+  }
+}

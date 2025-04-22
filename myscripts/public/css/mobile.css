@@ -866,3 +866,221 @@ a[href*="free"]:hover {
     font-size: 0.9rem;
   }
 }
+
+/* Mobile Layout Improvements - Add to mobile.css */
+
+/* Fix footer columns to be properly centered and side by side */
+@media (max-width: 991px) {
+  /* Hide MyScripts column */
+  .footer .row.justify-content-between > div:first-child {
+    display: none;
+  }
+  
+  /* Make Company and Resources columns side by side and centered */
+  .footer .row.justify-content-between {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  .footer .row.justify-content-between > div {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+    padding: 0 30px;
+    text-align: center;
+  }
+  
+  /* Adjust footer links alignment */
+  .footer-links {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+/* Horizontal scrolling testimonials with center focus */
+@media (max-width: 991px) {
+  .testimonials .container {
+    padding: 0;
+    position: relative;
+  }
+  
+  .testimonials .row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .testimonials .row::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+  
+  .testimonials .col-md-4 {
+    flex: 0 0 80%;
+    min-width: 80%;
+    padding: 0 10px;
+    scroll-snap-align: center;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+  }
+  
+  .testimonials .col-md-4:nth-child(2) {
+    opacity: 1;
+  }
+  
+  /* Position cards to show middle one centered with others partially visible */
+  .testimonials .row {
+    padding-left: 10%;
+  }
+  
+  /* Add scroll indicator */
+  .testimonials::after {
+    content: "← Scroll →";
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #6B7280;
+    font-size: 0.9rem;
+  }
+}
+
+/* Why Choose MyScripts - 2x2 grid with equal sized cards */
+@media (max-width: 991px) {
+  /* Make cards in a 2x2 grid */
+  .features .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 0;
+  }
+  
+  .features .col-md-4 {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+    max-width: none;
+  }
+  
+  /* Make all cards the same size */
+  .feature-card {
+    padding: 20px 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .feature-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  /* Hide 4th card on desktop */
+  @media (min-width: 992px) {
+    .features .col-md-4:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+/* Pricing cards with horizontal scroll and center focus */
+@media (max-width: 991px) {
+  .pricing-preview .container {
+    padding: 0;
+    position: relative;
+  }
+  
+  .pricing-preview .row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .pricing-preview .row::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .pricing-preview .col-md-4 {
+    flex: 0 0 80%;
+    min-width: 80%;
+    padding: 0 10px;
+    scroll-snap-align: center;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+  }
+  
+  .pricing-preview .col-md-4:nth-child(2) {
+    opacity: 1;
+  }
+  
+  /* Position cards to show middle one centered with others partially visible */
+  .pricing-preview .row {
+    padding-left: 10%;
+  }
+  
+  /* Reset featured card scaling on mobile */
+  .pricing-card.featured {
+    transform: none;
+    border: 2px solid var(--primary);
+  }
+  
+  /* Make pricing cards smaller on mobile */
+  .pricing-card {
+    transform: scale(0.95);
+    margin-bottom: 0;
+  }
+  
+  .pricing-header {
+    padding: 20px 15px;
+  }
+  
+  .price {
+    font-size: 2.2rem;
+  }
+  
+  .pricing-features {
+    padding: 15px;
+  }
+  
+  .pricing-features li {
+    padding: 6px 0 6px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .pricing-card .btn {
+    margin: 0 15px 15px;
+    padding: 10px 15px;
+  }
+  
+  /* Add scroll indicator */
+  .pricing-preview::after {
+    content: "← Scroll →";
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #6B7280;
+    font-size: 0.9rem;
+  }
+}

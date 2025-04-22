@@ -527,6 +527,37 @@
     text-align: center;
   }
 }
+
+/* Mobile Footer Column Layout Fixes */
+@media (max-width: 991px) {
+  /* Hide MyScripts column on mobile */
+  .footer .row.justify-content-between > div:first-child {
+    display: none;
+  }
+  
+  /* Make columns side by side */
+  .footer .row.justify-content-between {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .footer .row.justify-content-between > div {
+    flex: 0 0 45%;
+    width: 45%;
+    max-width: 45%;
+    text-align: center;
+  }
+  
+  /* Adjust footer links for better mobile display */
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* Add to both style.css and mobile.css */
 .cta-section .btn, 
 a.btn, 

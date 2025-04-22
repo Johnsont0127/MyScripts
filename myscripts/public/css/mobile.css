@@ -693,3 +693,176 @@ a[href*="free"]:hover {
     justify-content: center;
   }
 }
+
+/* Mobile Layout Improvements - Add to mobile.css */
+
+/* Fix footer columns to be side by side */
+@media (max-width: 991px) {
+  /* Hide MyScripts column */
+  .footer .row.justify-content-between > div:first-child {
+    display: none;
+  }
+  
+  /* Make Company and Resources columns side by side */
+  .footer .row.justify-content-between {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  
+  .footer .row.justify-content-between > div {
+    flex: 0 0 48%;
+    width: 48%;
+    max-width: 48%;
+    padding: 0 10px;
+  }
+  
+  /* Adjust footer links alignment */
+  .footer-links {
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+/* Horizontal scrolling testimonials with center focus */
+@media (max-width: 991px) {
+  .testimonials .container {
+    overflow: visible;
+  }
+  
+  .testimonials .row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    margin: 0 -20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .testimonials .row::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+  
+  .testimonials .col-md-4 {
+    flex: 0 0 80%;
+    min-width: 80%;
+    padding: 0 10px;
+    scroll-snap-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Adjust positioning to show partial cards */
+  .testimonials .row {
+    padding-left: 10%;
+  }
+  
+  .testimonials .col-md-4:first-child {
+    margin-left: -5%;
+  }
+  
+  /* Add scroll indicator */
+  .testimonials::after {
+    content: "← Scroll →";
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #6B7280;
+    font-size: 0.9rem;
+  }
+}
+
+/* Why Choose MyScripts - 4 cards in 2x2 grid */
+@media (max-width: 991px) {
+  /* Add HTML for the 4th card in your layout.ejs file */
+  
+  /* Make cards smaller and in a 2x2 grid */
+  .features .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 0;
+  }
+  
+  .features .col-md-4 {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  
+  /* Make cards slightly smaller */
+  .feature-card {
+    padding: 20px 15px;
+    height: auto;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+/* Pricing cards with horizontal scroll and center focus */
+@media (max-width: 991px) {
+  .pricing-preview .container {
+    overflow: visible;
+  }
+  
+  .pricing-preview .row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    margin: 0 -20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .pricing-preview .row::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .pricing-preview .col-md-4 {
+    flex: 0 0 80%;
+    min-width: 80%;
+    padding: 0 10px;
+    scroll-snap-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Adjust positioning to show partial cards */
+  .pricing-preview .row {
+    padding-left: 10%;
+  }
+  
+  .pricing-preview .col-md-4:first-child {
+    margin-left: -5%;
+  }
+  
+  /* Reset featured card scaling on mobile */
+  .pricing-card.featured {
+    transform: none;
+    border: 2px solid var(--primary);
+  }
+  
+  /* Add scroll indicator */
+  .pricing-preview::after {
+    content: "← Scroll →";
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #6B7280;
+    font-size: 0.9rem;
+  }
+}

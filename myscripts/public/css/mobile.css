@@ -549,3 +549,116 @@ a[href*="free"]:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
+/* Add to mobile.css - Improved mobile layouts */
+@media (max-width: 991px) {
+  /* Feature cards in 2-column grid */
+  .features .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .features .col-md-4 {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  
+  /* Horizontal scrolling cards for testimonials */
+  .testimonials .row {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .testimonials .col-md-4 {
+    flex: 0 0 85%;
+    max-width: 85%;
+    padding: 0 10px;
+    scroll-snap-align: center;
+  }
+  
+  .testimonials .col-md-4:first-child {
+    padding-left: 15px;
+  }
+  
+  .testimonials .col-md-4:last-child {
+    padding-right: 15px;
+  }
+  
+  /* Add scroll indicator */
+  .testimonials::after {
+    content: "← Scroll →";
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #6B7280;
+    font-size: 0.9rem;
+  }
+  
+  /* Dashboard cards in 2-column grid */
+  .dashboard-container .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .dashboard-container .col-md-3,
+  .dashboard-container .col-md-4,
+  .dashboard-container .col-md-6 {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  
+  /* Pricing cards horizontal scroll */
+  .pricing-preview .row {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .pricing-preview .col-md-4 {
+    flex: 0 0 85%;
+    max-width: 85%;
+    padding: 0 10px;
+    scroll-snap-align: center;
+  }
+  
+  /* How it works section - 2 columns on larger phones */
+  @media (min-width: 576px) {
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    
+    .step {
+      margin-bottom: 0;
+    }
+  }
+  
+  /* Add some breathing room between sections */
+  section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Improve spacing for stacked elements */
+  .mb-4 {
+    margin-bottom: 15px !important;
+  }
+  
+  /* Make buttons more touch-friendly */
+  .btn {
+    padding: 12px 20px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

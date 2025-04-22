@@ -751,3 +751,87 @@ body {
     margin-bottom: 20px;
   }
 }
+
+/* Desktop Footer Improvements */
+@media (min-width: 992px) {
+  /* Fix for Stay Updated section */
+  .footer .input-group {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .footer .input-group .form-control {
+    flex: 1;
+    height: 48px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .footer .input-group .btn {
+    height: 48px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: auto;
+    padding: 0 20px;
+  }
+  
+  /* Remove MyScripts column and adjust layout */
+  .footer .row.justify-content-between {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Hide MyScripts column on desktop */
+  .footer .row.justify-content-between > div:first-child {
+    display: none;
+  }
+  
+  /* Adjust Company and Resources columns */
+  .footer .row.justify-content-between > div:nth-child(2),
+  .footer .row.justify-content-between > div:nth-child(3) {
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin: 0 50px;
+  }
+  
+  /* Center align column headings */
+  .footer .row.justify-content-between h5 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  /* Center align links */
+  .footer .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer .footer-links li {
+    margin-bottom: 15px;
+  }
+  
+  .footer .row.justify-content-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer .row.justify-content-between > div {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+
+/* Footer column alignment fix */
+.footer .row.justify-content-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .row.justify-content-between > div {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
